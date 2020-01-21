@@ -18,6 +18,7 @@
   "homepage": "https://github.com/DoerJ/angular-js-whois#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^3.5.2",
     "whois": "^2.11.0"
   }
 }
