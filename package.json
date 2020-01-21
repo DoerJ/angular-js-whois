@@ -1,0 +1,23 @@
+{
+  "name": "angular-js-whois",
+  "version": "1.0.0",
+  "description": "An angularjs application with WHOIS domain lookup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoerJ/angular-js-whois.git"
+  },
+  "author": "James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoerJ/angular-js-whois/issues"
+  },
+  "homepage": "https://github.com/DoerJ/angular-js-whois#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "whois": "^2.11.0"
+  }
+}
