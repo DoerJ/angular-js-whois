@@ -23,3 +23,6 @@ li > span {
     margin-right: 10px;
     font-weight: 500;
 }
+li > #nomatch-msg {
+    color: red;
+}

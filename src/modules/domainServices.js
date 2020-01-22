@@ -13,9 +13,6 @@ domainServices
                 case 'net':
                     return true;
                     break;
-                case 'org':
-                    return true;
-                    break;
                 case 'edu':
                     return true;
                     break;

@@ -25,7 +25,10 @@
                 <button class="btn btn-primary" id="domain-btn" type="submit" ng-click="sendDomain(domainName)">Submit</button>
             </form>
             <ul id="whois-info">
-                <li ng-repeat="item in data track by $index"><span>{{item.split(':')[0]}}:</span>{{item.split(':')[1]}}</li>
+                <li ng-repeat="item in data track by $index" ng-if="status === 200">
+                    <span>{{item.split(':')[0]}}:</span>{{item.split(':')[1]}}
+                </li>
+                <li ng-repeat="item in data track by $index" ng-if="status === 400">{{item}}</li>
             </ul>
         </div>
     </body>

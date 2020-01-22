@@ -31,7 +31,7 @@ app.post('/', function(req, res) {
     // insert logging info into db
     whoisdb.collection('domainLookUp').insertOne(logging, function(err, res) {
         if(err) throw err;
-        console.log('DOMAIN LOGGING INSERTED');
+        console.log('DOMAIN LOOKUP LOGGING INSERTED');
         if(disconnectRequested) db.disconnectToMongoDB();
     })
     // whois lookup
@@ -42,7 +42,11 @@ app.post('/', function(req, res) {
         "follow": 2
     }
     whois.lookup(domain, options, function(err, data) {
-        res.send({ code: 200, whoisData: data });
+        let whoisDataFormated = data.trim().split('\n');
+        if(whoisDataFormated[0].toLowerCase().includes('no match')) {
+            res.send({ code: 400, whoisData: whoisDataFormated });
+        }
+        else res.send({ code: 200, whoisData: whoisDataFormated });
     });
 })
 
