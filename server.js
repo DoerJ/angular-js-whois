@@ -28,7 +28,7 @@ app.post('/', function(req, res) {
     var domain = req.body.domain;
     var timestamp = new Date().toString();
     var logging = { domain: domain, timestamp: timestamp };
-    // insert logging info into db
+    // insert logging info
     whoisdb.collection('domainLookUp').insertOne(logging, function(err, res) {
         if(err) throw err;
         console.log('DOMAIN LOOKUP LOGGING INSERTED');

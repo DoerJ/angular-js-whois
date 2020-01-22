@@ -20,7 +20,7 @@
             <form ng-init="initgRecaptcha()">
                 <div class="form-group">
                     <label for="domain-input">Domain Name</label>
-                    <input class="form-control" id="domain-input" placeholder="Enter your domain" ng-model="domainName" />
+                    <input class="form-control" id="domain-input" placeholder="Enter your domain" maxlength="50" ng-model="domainName" />
                     <small id="domain-hint" class="form-text text-muted">Never share your private domain with others</small>
                 </div>
                 <div class="g-recaptcha" data-sitekey="6LdpptEUAAAAAJ8T3TfmkUmj-uPwfF49RJevYk1A" ng-model="grecaptchaResponse"></div>
