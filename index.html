@@ -11,17 +11,19 @@
             crossorigin="anonymous"
         >
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="src/modules/domainServices.js"></script>
         <script src="src/modules/domainParser.js"></script>
     </head>
     <body ng-app="domainParser">
         <div id="domain-parser" ng-controller="domainHandler">
-            <form>
+            <form ng-init="initgRecaptcha()">
                 <div class="form-group">
                     <label for="domain-input">Domain Name</label>
                     <input class="form-control" id="domain-input" placeholder="Enter your domain" ng-model="domainName" />
                     <small id="domain-hint" class="form-text text-muted">Never share your private domain with others</small>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LdpptEUAAAAAJ8T3TfmkUmj-uPwfF49RJevYk1A" ng-model="grecaptchaResponse"></div>
                 <button class="btn btn-primary" id="domain-btn" type="submit" ng-click="sendDomain(domainName)">Submit</button>
             </form>
             <ul id="whois-info">
