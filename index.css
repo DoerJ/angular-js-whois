@@ -1,3 +1,25 @@
-#whois-info {
+#domain-input {
+    background-color: white;
+}
+#domain-btn {
+    background-color: #188f28;
+    border: 1px solid #188f28;
+}
+#domain-parser {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+form label {
+    font-size: 50px;
+}
+ul {
+    margin-top: 50px;
     list-style: none;
+    padding-left: 0;
+    padding-top: 50px;
+}
+li > span {
+    color: #188f28;
+    margin-right: 10px;
+    font-weight: 500;
 }
