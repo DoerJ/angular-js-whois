@@ -1,8 +1,10 @@
-var domainParser = angular.module('domainParser', []);
+var domainParser = angular.module('domainParser', ['domainServices']);
 
-domainParser.controller("domainHandler", function($scope, $http) {
+domainParser.controller("domainHandler", function($scope, $http, services) {
     $scope.sendDomain = function(domainName) {
         var onSuccess = function(data, status, headers, config) {
+            let domainValidator = services.domainValidator;
+            if(!domainValidator(domainName)) { alert('Please enter a valid domain name!'); return; }
             let whoisData = data.data.whoisData;
             let whoisDataFormated = whoisData.trim().split('\n');
             $scope.data = whoisDataFormated;
@@ -13,6 +15,7 @@ domainParser.controller("domainHandler", function($scope, $http) {
         var postReq = {
             method: 'POST',
             url: 'http://localhost:5000',
+            cache: true,
             data: { domain: domainName }
         }
         $http(postReq)
