@@ -1,14 +1,14 @@
 # angular-js-whois
 An AngularJS application with WHOIS domain lookup
 
-### Technology stack
+#### Technology stack
 * Front-end: AngularJS v1.7.9
 * UI: Bootstrap
 * Back-end: NodeJS with Express.js
 * Database: MongoDB
 * Security: Google reCAPTCHAv2
 
-### Running application
+#### Running application
 
 > Prerequisites: have NPM and MongoDB Drive installed on machine
 
