@@ -1,5 +1,5 @@
 # angular-js-whois
-An AngularJS application with WHOIS domain lookup
+An AngularJS application with domain WHOIS lookup
 
 #### Technology stack
 * Front-end: AngularJS v1.7.9
